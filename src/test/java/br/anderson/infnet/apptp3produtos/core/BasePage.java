@@ -81,8 +81,12 @@ public abstract class BasePage<P extends BasePage<P>> {
 	}
 
 	protected void sleep(long ms) {
-		Thread.sleep(ms);
-	}
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 	public void scrollTo(By locator) {
 		WebElement element = $(locator);
