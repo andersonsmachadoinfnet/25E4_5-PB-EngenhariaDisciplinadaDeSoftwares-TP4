@@ -84,7 +84,6 @@ public abstract class BasePage<P extends BasePage<P>> {
         try {
             Thread.sleep(ms);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
         }
     }
 
