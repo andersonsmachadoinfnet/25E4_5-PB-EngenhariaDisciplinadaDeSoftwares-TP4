@@ -15,12 +15,12 @@ class AppControllerTest {
     @Test
     @DisplayName("Testa Controller, telaHome;")
     void testeTelaHome() {
-        Assertions.assertEquals(appController.telaHome(), "index");
+        Assertions.assertEquals("index", appController.telaHome());
     }
 
     @Test
     @DisplayName("Testa Controller, telaIndex;")
     void testeTelaIndex() {
-        Assertions.assertEquals(appController.telaIndex(), "index");
+        Assertions.assertEquals( "index", appController.telaIndex());
     }
 }

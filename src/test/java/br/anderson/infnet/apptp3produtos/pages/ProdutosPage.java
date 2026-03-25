@@ -9,13 +9,13 @@ import org.openqa.selenium.WebElement;
 import java.time.Duration;
 
 public class ProdutosPage  extends BasePage<HomePage> {
-    private final static String URL = "http://localhost:8080/produto/lista";
-    private final By linhasTabelas = By.cssSelector("tbody tr");
-    private final By celulasTabelas = By.cssSelector("tbody tr td");
-    private final By textoQtd = By.tagName("h5");
-    private final By linkExcluir = By.className("link-excluir");
-    private final By linkBtnNovo = By.id("link-novo");
-    private final By linkBtnEditar = By.className("link-editar");
+    private static final String URL = "http://localhost:8080/produto/lista";
+    private static final By linhasTabelas = By.cssSelector("tbody tr");
+    private static final By celulasTabelas = By.cssSelector("tbody tr td");
+    private static final By textoQtd = By.tagName("h5");
+    private static final By linkExcluir = By.className("link-excluir");
+    private static final By linkBtnNovo = By.id("link-novo");
+    private static final By linkBtnEditar = By.className("link-editar");
 
     protected ProdutosPage(WebDriver driver, Duration duration) {
         super(driver, duration, URL);
@@ -47,7 +47,6 @@ public class ProdutosPage  extends BasePage<HomePage> {
 
     public Boolean hasProdutoNomeNaTabela(Produto produto) {
         for(WebElement linha : $$(celulasTabelas)) {
-            String texto = linha.getText();
             if (linha.getText().equals(produto.getNome())) {
                 return true;
             }

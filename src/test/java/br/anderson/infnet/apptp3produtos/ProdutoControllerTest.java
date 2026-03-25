@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ProdutoControllerTest {
+    private static final String LNK_PRODUTO_LISTA = "redirect:/produto/lista";
     @Autowired
     private ProdutoController produtoController;
     private Model model;
@@ -24,27 +25,27 @@ class ProdutoControllerTest {
     @Order(1)
     @DisplayName("Testa Controller, telaCadastro;")
     void testeTelaCadastro() {
-        Assertions.assertEquals(produtoController.telaCadastro(), "produto/cadastro");
+        Assertions.assertEquals("produto/cadastro", produtoController.telaCadastro());
     }
 
     @Test
     @Order(2)
     @DisplayName("Testa Controller, telaLista;")
     void testeTelaLista() {
-        Assertions.assertEquals(produtoController.telaLista(model), "produto/lista");
+        Assertions.assertEquals("produto/lista", produtoController.telaLista(model));
     }
 
     @Test
     @Order(999)
     @DisplayName("Testa Controller, excluir;")
     void testeExcluir() {
-        Assertions.assertEquals(produtoController.excluir(2), "redirect:/produto/lista");
+        Assertions.assertEquals(LNK_PRODUTO_LISTA, produtoController.excluir(2));
     }
 
     @Test
     @DisplayName("Testa Controller, excluir inexistente;")
     void testeExcluirInexistente() {
-        Assertions.assertEquals(produtoController.excluir(9999), "redirect:/produto/lista");
+        Assertions.assertEquals(LNK_PRODUTO_LISTA, produtoController.excluir(9999));
     }
 
 //    @Test
@@ -58,13 +59,13 @@ class ProdutoControllerTest {
     @Order(4)
     @DisplayName("Testa Controller, editar inexistente;")
     void testeEditarInexistente() {
-        Assertions.assertEquals(produtoController.editar(999, model), "redirect:/produto/lista");
+        Assertions.assertEquals(LNK_PRODUTO_LISTA, produtoController.editar(999, model));
     }
 
     @Test
     @Order(5)
     @DisplayName("Testa Controller, incluir;")
     void testeIncluir() {
-        Assertions.assertEquals(produtoController.incluir(ProdutoBuilder.aProduto().build()), "redirect:/produto/lista");
+        Assertions.assertEquals(LNK_PRODUTO_LISTA, produtoController.incluir(ProdutoBuilder.aProduto().build()));
     }
 }

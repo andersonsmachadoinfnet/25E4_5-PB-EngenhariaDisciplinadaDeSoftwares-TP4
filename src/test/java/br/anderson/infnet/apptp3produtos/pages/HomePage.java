@@ -7,16 +7,10 @@ import org.openqa.selenium.WebDriver;
 import java.time.Duration;
 
 public class HomePage extends BasePage<HomePage> {
-    private final static String URL = "http://localhost:8080/";
-    private final By linkProduto = By.id("linkProduto");
-
+    private static final String URL = "http://localhost:8080/";
 
 	public HomePage(WebDriver driver, Duration duration) {
         super(driver, duration, URL);
     }
 
-//    public ProdutosPage navegarParaListaDeProdutos() {
-//        click(linkProduto);
-//        return new ProdutosPage(driver, duration);
-//    }
 }

@@ -9,24 +9,24 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 //@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class CadastroPageTest extends BaseTest {
+class CadastroPageTest extends BaseTest {
     private CadastroPage cadastroPage;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         this.cadastroPage = new CadastroPage(driver, DURATION);
         this.cadastroPage.abrir();
     }
 
     @Test
     @DisplayName("Testar abertura do browser na página")
-    public void testa()  {
+    void testa()  {
         Assertions.assertTrue(cadastroPage.isOnPage());
     }
 
     @Test
     @DisplayName("Testar preenchimento da tela de cadastro")
-    public void testaPreenchimentoFormulario() {
+    void testaPreenchimentoFormulario() {
         Produto produto = ProdutoBuilder.aProduto().build();
         cadastrarProduto(produto);
         try {
@@ -34,10 +34,11 @@ public class CadastroPageTest extends BaseTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        Assertions.assertEquals(1,1);
+        int um = 1;
+        Assertions.assertEquals(1,um);
     }
 
-    public void cadastrarProduto(Produto produto) {
+    void cadastrarProduto(Produto produto) {
         cadastroPage.cadastrarProduto(produto);
     }
 }

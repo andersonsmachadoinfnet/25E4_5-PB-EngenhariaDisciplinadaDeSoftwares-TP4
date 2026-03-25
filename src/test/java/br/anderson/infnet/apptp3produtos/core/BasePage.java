@@ -63,12 +63,9 @@ public abstract class BasePage<P extends BasePage<P>> {
 		int maxScrolls = 20;
 
 		for (int i = 0; i < maxScrolls; i++) {
-			try {
-				WebElement el = driver.findElement(locator);
-				if (el.isDisplayed()) {
-					return el;
-				}
-			} catch (Exception ignored) {
+			WebElement el = driver.findElement(locator);
+			if (el.isDisplayed()) {
+				return el;
 			}
 
 			scrollBy(0, 300);
@@ -80,15 +77,11 @@ public abstract class BasePage<P extends BasePage<P>> {
 	}
 
 	public boolean isOnPage() {
-		String lUrl = driver.getCurrentUrl();
 		return url.equals(driver.getCurrentUrl());
 	}
 
 	protected void sleep(long ms) {
-		try {
-			Thread.sleep(ms);
-		} catch (InterruptedException ignored) {
-		}
+		Thread.sleep(ms);
 	}
 
 	public void scrollTo(By locator) {

@@ -8,13 +8,13 @@ import org.openqa.selenium.WebDriver;
 import java.time.Duration;
 
 public class CadastroPage  extends BasePage<HomePage> {
-    private final static String URL = "http://localhost:8080/produto?";
-    public final By inputId = By.id("input-id");
-    public final By inputEan = By.id("input-ean");
-    public final By inputNome = By.id("input-nome");
-    public final By inputPreco = By.id("input-preco");
-    public final By inputImglink = By.id("input-imglink");
-    private final By btnCadastrar = By.id("btn-cadastrar");
+    private static final String URL = "http://localhost:8080/produto?";
+    public static final By inputId = By.id("input-id");
+    public static final By inputEan = By.id("input-ean");
+    public static final By inputNome = By.id("input-nome");
+    public static final By inputPreco = By.id("input-preco");
+    public static final By inputImglink = By.id("input-imglink");
+    private static final By btnCadastrar = By.id("btn-cadastrar");
 
     protected CadastroPage(WebDriver driver, Duration duration) {
         super(driver, duration, URL);
