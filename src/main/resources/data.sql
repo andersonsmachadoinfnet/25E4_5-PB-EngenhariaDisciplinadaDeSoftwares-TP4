@@ -1,0 +1,2 @@
+insert into produto(ean, nome, preco, imglink) values('7894900010015','Coca-Cola Lata 350ml', 5.00, 'https://www.piramidesdistribuidora.com.br/images/products/3716-coca-cola-lata-350ml-normal-12un.20251024104230.png');
+insert into produto(ean, nome, preco, imgLink) values('7891220054662','Biscoito maizena', 3.50,'https://img.cdndsgni.com/preview/10927046.jpg');
