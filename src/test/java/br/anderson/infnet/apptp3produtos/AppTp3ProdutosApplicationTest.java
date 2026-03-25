@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class AppTp3ProdutosApplicationTest {
+class AppTp3ProdutosApplicationTest {
     @Test
     @DisplayName("Testa Produto, campos;")
-    public void testeMain() {
+    void testeMain() {
         Assertions.assertDoesNotThrow(
                 () -> {
                     String[] args = new String[] {""};

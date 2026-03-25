@@ -8,11 +8,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class ProdutoTest {
+class ProdutoTest {
 
     @Test
     @DisplayName("Testa Produto, campos;")
-    public void testeProdutoCampos() {
+    void testeProdutoCampos() {
         Produto produtoOrig = ProdutoBuilder.aProduto().build();
         Produto produtoDest = new Produto();
 
@@ -31,7 +31,7 @@ public class ProdutoTest {
 
     @Test
     @DisplayName("Testa o construtor da classe Produto")
-    public void testeProdutoConstrutor() {
+    void testeProdutoConstrutor() {
         Produto produtoBase = ProdutoBuilder.aProduto().build();
         Produto produto = new Produto(1, produtoBase.getEan(), produtoBase.getNome(), produtoBase.getPreco(), produtoBase.getImglink());
         Assertions.assertEquals(produto.getNome(), produtoBase.getNome());

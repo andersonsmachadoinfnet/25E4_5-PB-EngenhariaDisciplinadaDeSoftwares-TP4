@@ -10,40 +10,40 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class ProdutoControllerTest {
+class ProdutoControllerTest {
     @Autowired
     private ProdutoController produtoController;
     private Model model;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         this.model = Mockito.mock(Model.class);
     }
 
     @Test
     @Order(1)
     @DisplayName("Testa Controller, telaCadastro;")
-    public void testeTelaCadastro() {
+    void testeTelaCadastro() {
         Assertions.assertEquals(produtoController.telaCadastro(), "produto/cadastro");
     }
 
     @Test
     @Order(2)
     @DisplayName("Testa Controller, telaLista;")
-    public void testeTelaLista() {
+    void testeTelaLista() {
         Assertions.assertEquals(produtoController.telaLista(model), "produto/lista");
     }
 
     @Test
     @Order(999)
     @DisplayName("Testa Controller, excluir;")
-    public void testeExcluir() {
+    void testeExcluir() {
         Assertions.assertEquals(produtoController.excluir(2), "redirect:/produto/lista");
     }
 
     @Test
     @DisplayName("Testa Controller, excluir inexistente;")
-    public void testeExcluirInexistente() {
+    void testeExcluirInexistente() {
         Assertions.assertEquals(produtoController.excluir(9999), "redirect:/produto/lista");
     }
 
@@ -57,14 +57,14 @@ public class ProdutoControllerTest {
     @Test
     @Order(4)
     @DisplayName("Testa Controller, editar inexistente;")
-    public void testeEditarInexistente() {
+    void testeEditarInexistente() {
         Assertions.assertEquals(produtoController.editar(999, model), "redirect:/produto/lista");
     }
 
     @Test
     @Order(5)
     @DisplayName("Testa Controller, incluir;")
-    public void testeIncluir() {
+    void testeIncluir() {
         Assertions.assertEquals(produtoController.incluir(ProdutoBuilder.aProduto().build()), "redirect:/produto/lista");
     }
 }

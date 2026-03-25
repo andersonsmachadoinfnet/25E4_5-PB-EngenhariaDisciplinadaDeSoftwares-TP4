@@ -32,7 +32,7 @@ public class ProdutoController {
     public String incluir(Produto produto) {
         produtoService.incluir(produto);
         msg = "Produto "+produto.getNome()+" incluido com sucesso!";
-        return "redirect:"+LINK_LISTA;
+        return "redirect:/"+LINK_LISTA;
     }
 
     @GetMapping(value="/produto/{id}/excluir")
@@ -44,7 +44,7 @@ public class ProdutoController {
         } catch (Exception e) {
             msg = "Impossível realizar a exclusão do produto ";
         }
-        return "redirect:"+LINK_LISTA;
+        return "redirect:/"+LINK_LISTA;
     }
 
     @GetMapping(value="/produto/{id}/editar")

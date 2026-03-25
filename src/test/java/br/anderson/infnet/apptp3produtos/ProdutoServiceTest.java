@@ -14,13 +14,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Locale;
 
 @SpringBootTest
-public class ProdutoServiceTest {
+class ProdutoServiceTest {
     @Autowired
     private ProdutoService produtoService;
 
     @Test
     @DisplayName("Testa a cadastramento de um novo item de produto")
-    public void testCadastrarProduto() {
+    void testCadastrarProduto() {
         Produto produto = ProdutoBuilder.aProduto().build();
         produto = produtoService.incluir(produto);
         Assertions.assertNotNull(produto.getId());
@@ -28,7 +28,7 @@ public class ProdutoServiceTest {
 
     @Test
     @DisplayName("Testa alteração de um determinado item.")
-    public void testAlterarProduto() {
+    void testAlterarProduto() {
         Faker faker = new Faker(new Locale("pt-BR"));
         Produto produto = produtoService.buscarPorId(1);
         String  nome = faker.commerce().productName();
@@ -39,7 +39,7 @@ public class ProdutoServiceTest {
 
     @Test
     @DisplayName("Testa exclusão de um determinado item.")
-    public void testExcluirProduto() {
+    void testExcluirProduto() {
         Produto produto = produtoService.buscarPorId(1);
         Assertions.assertNotNull(produto);
         produtoService.excluir(produto.getId());
