@@ -16,7 +16,7 @@
 		<h3>Cadastro de Produtos</h3>
 
 			<c:if test="${not empty produto}">
-				<input type="hidden" id="input-id" value="${produto.id}" class="form-control">
+				<input type="text" id="input-id" value="${produto.id}" class="form-control">
 			</c:if>
 
 			<label>EAN:</label>
