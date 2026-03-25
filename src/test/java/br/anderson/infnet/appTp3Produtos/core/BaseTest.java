@@ -37,7 +37,7 @@ public abstract class BaseTest {
 	private ChromeOptions configurarChrom() {
 		var options = new ChromeOptions();
 		options.addArguments(List.of(
-		//"--headless",
+		"--headless",
 		"--disable-notifications",
 		"--no-default-browser-check",
 		"--disable-site-isolation-trials",
