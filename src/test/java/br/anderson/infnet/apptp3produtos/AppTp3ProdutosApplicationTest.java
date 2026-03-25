@@ -1,4 +1,4 @@
-package br.anderson.infnet.appTp3Produtos;
+package br.anderson.infnet.apptp3produtos;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

@@ -1,4 +1,4 @@
-package br.anderson.infnet.appTp3Produtos.controller;
+package br.anderson.infnet.apptp3produtos.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

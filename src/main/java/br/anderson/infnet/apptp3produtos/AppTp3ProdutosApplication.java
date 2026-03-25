@@ -1,4 +1,4 @@
-package br.anderson.infnet.appTp3Produtos;
+package br.anderson.infnet.apptp3produtos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

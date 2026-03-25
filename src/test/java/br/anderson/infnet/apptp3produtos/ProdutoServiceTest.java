@@ -1,16 +1,14 @@
-package br.anderson.infnet.appTp3Produtos;
+package br.anderson.infnet.apptp3produtos;
 
-import br.anderson.infnet.appTp3Produtos.model.domain.Produto;
-import br.anderson.infnet.appTp3Produtos.model.domain.builder.ProdutoBuilder;
-import br.anderson.infnet.appTp3Produtos.model.service.ProdutoService;
+import br.anderson.infnet.apptp3produtos.model.domain.Produto;
+import br.anderson.infnet.apptp3produtos.model.domain.builder.ProdutoBuilder;
+import br.anderson.infnet.apptp3produtos.model.service.ProdutoService;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Locale;

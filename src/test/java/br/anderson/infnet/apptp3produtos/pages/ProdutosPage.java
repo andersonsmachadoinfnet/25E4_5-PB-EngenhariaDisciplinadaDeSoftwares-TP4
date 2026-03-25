@@ -1,7 +1,7 @@
-package br.anderson.infnet.appTp3Produtos.pages;
+package br.anderson.infnet.apptp3produtos.pages;
 
-import br.anderson.infnet.appTp3Produtos.core.BasePage;
-import br.anderson.infnet.appTp3Produtos.model.domain.Produto;
+import br.anderson.infnet.apptp3produtos.core.BasePage;
+import br.anderson.infnet.apptp3produtos.model.domain.Produto;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

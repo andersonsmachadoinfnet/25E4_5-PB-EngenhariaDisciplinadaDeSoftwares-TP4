@@ -1,14 +1,9 @@
-package br.anderson.infnet.appTp3Produtos.pages;
+package br.anderson.infnet.apptp3produtos.pages;
 
-import br.anderson.infnet.appTp3Produtos.core.BaseTest;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import br.anderson.infnet.apptp3produtos.core.BaseTest;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import java.time.Duration;
 
 //@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class HomePageTest extends BaseTest {

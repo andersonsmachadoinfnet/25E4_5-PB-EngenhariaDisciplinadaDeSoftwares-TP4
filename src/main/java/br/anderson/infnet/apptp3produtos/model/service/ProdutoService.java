@@ -1,7 +1,7 @@
-package br.anderson.infnet.appTp3Produtos.model.service;
+package br.anderson.infnet.apptp3produtos.model.service;
 
-import br.anderson.infnet.appTp3Produtos.model.domain.Produto;
-import br.anderson.infnet.appTp3Produtos.model.repository.ProdutoRepository;
+import br.anderson.infnet.apptp3produtos.model.domain.Produto;
+import br.anderson.infnet.apptp3produtos.model.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package br.anderson.infnet.appTp3Produtos.controller;
+package br.anderson.infnet.apptp3produtos.controller;
 
-import br.anderson.infnet.appTp3Produtos.model.domain.Produto;
-import br.anderson.infnet.appTp3Produtos.model.service.ProdutoService;
+import br.anderson.infnet.apptp3produtos.model.domain.Produto;
+import br.anderson.infnet.apptp3produtos.model.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.Optional;
-
 @Controller
 public class ProdutoController {
+    private static final String LINK_LISTA = "produto/lista";
+
     @Autowired
     private ProdutoService produtoService;
     private String msg;
@@ -25,14 +25,14 @@ public class ProdutoController {
         model.addAttribute("produtos", produtoService.listar());
         model.addAttribute("mensagem", msg);
         msg = null;
-        return "produto/lista";
+        return LINK_LISTA;
     }
 
     @PostMapping(value="/produto/incluir")
     public String incluir(Produto produto) {
         produtoService.incluir(produto);
         msg = "Produto "+produto.getNome()+" incluido com sucesso!";
-        return "redirect:/produto/lista";
+        return "redirect:"+LINK_LISTA;
     }
 
     @GetMapping(value="/produto/{id}/excluir")
@@ -44,7 +44,7 @@ public class ProdutoController {
         } catch (Exception e) {
             msg = "Impossível realizar a exclusão do produto ";
         }
-        return "redirect:/produto/lista";
+        return "redirect:"+LINK_LISTA;
     }
 
     @GetMapping(value="/produto/{id}/editar")

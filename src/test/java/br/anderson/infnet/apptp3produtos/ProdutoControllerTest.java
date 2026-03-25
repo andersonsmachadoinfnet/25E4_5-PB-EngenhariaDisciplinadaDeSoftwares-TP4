@@ -1,7 +1,7 @@
-package br.anderson.infnet.appTp3Produtos;
+package br.anderson.infnet.apptp3produtos;
 
-import br.anderson.infnet.appTp3Produtos.controller.ProdutoController;
-import br.anderson.infnet.appTp3Produtos.model.domain.builder.ProdutoBuilder;
+import br.anderson.infnet.apptp3produtos.controller.ProdutoController;
+import br.anderson.infnet.apptp3produtos.model.domain.builder.ProdutoBuilder;
 import org.junit.jupiter.api.*;
 import org.springframework.ui.Model;
 import org.mockito.Mockito;

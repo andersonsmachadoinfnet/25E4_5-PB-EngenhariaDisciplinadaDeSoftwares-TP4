@@ -1,6 +1,6 @@
-package br.anderson.infnet.appTp3Produtos.model.domain.builder;
+package br.anderson.infnet.apptp3produtos.model.domain.builder;
 
-import br.anderson.infnet.appTp3Produtos.model.domain.Produto;
+import br.anderson.infnet.apptp3produtos.model.domain.Produto;
 import com.github.javafaker.Faker;
 
 import java.util.Locale;

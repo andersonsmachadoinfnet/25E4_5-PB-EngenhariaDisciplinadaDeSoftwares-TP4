@@ -1,4 +1,4 @@
-package br.anderson.infnet.appTp3Produtos.model.domain;
+package br.anderson.infnet.apptp3produtos.model.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

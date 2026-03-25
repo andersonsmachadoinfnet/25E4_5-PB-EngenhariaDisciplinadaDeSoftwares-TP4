@@ -1,4 +1,4 @@
-package br.anderson.infnet.appTp3Produtos.core;
+package br.anderson.infnet.apptp3produtos.core;
 
 import java.time.Duration;
 import java.util.List;

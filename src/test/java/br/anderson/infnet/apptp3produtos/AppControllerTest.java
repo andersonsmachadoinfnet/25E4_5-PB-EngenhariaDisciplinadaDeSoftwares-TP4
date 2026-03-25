@@ -1,6 +1,6 @@
-package br.anderson.infnet.appTp3Produtos;
+package br.anderson.infnet.apptp3produtos;
 
-import br.anderson.infnet.appTp3Produtos.controller.AppController;
+import br.anderson.infnet.apptp3produtos.controller.AppController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
