@@ -22,8 +22,15 @@ jobs:
         java-version: '21'
         cache: 'maven'
 
-    - name: Build + Testes
+    - name: Build + Testes + Coverage
       run: mvn -B clean verify
+
+    - name: SonarCloud Scan
+      run: mvn -B sonar:sonar \
+        -Dsonar.projectKey=andersonsmachadoinfnet_25E4_5-PB-EngenhariaDisciplinadaDeSoftwares-TP4 \
+        -Dsonar.organization=andersonsmachadoinfnet \
+        -Dsonar.host.url=https://sonarcloud.io \
+        -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
     - name: Upload dos relatórios de teste
       if: always()
@@ -32,7 +39,7 @@ jobs:
         name: test-results
         path: target/surefire-reports/
 
-    - name: Upload cobertura (se usar JaCoCo)
+    - name: Upload cobertura (JaCoCo)
       if: always()
       uses: actions/upload-artifact@v4
       with:
