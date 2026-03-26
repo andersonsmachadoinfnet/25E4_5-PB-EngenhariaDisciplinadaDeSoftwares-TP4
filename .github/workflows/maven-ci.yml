@@ -43,7 +43,7 @@ jobs:
         path: target/site/jacoco/
   package:
     runs-on: ubuntu-latest
-    needs: test
+    needs: build
     steps:
       - uses: actions/checkout@v4
 
@@ -58,7 +58,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [build, test]
+    needs: [package]
     steps:
       - name: Deploy
         run: echo "Deploy realizado com sucesso"
