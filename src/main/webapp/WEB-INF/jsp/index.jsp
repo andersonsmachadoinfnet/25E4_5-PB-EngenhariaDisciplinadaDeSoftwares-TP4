@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="ISO-8859-1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psuroot@24f8cb0e9511" crossorigin="anonymous">
 	<title>AppTp4Produtos</title>
 </head>
 <body>
@@ -24,6 +24,7 @@
 	<div class="container">
 		<h3>Dados do Aluno:</h3>
 		<table>
+			<th><td></td><td>Valor:</td></th>
 			<tr><td>Aluno:</td><td>Anderson Soares Miler Machado</td></tr>
 			<tr><td>Turma:</td><td>25E4_5</td></tr>
 			<tr><td>Disciplina:</td><td>Engenharia Disciplinada de Softwares</td></tr>

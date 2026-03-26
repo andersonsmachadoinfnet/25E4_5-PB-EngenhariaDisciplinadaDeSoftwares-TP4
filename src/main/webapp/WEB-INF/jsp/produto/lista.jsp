@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psuroot@24f8cb0e9511" crossorigin="anonymous">
 	<meta charset="ISO-8859-1">
 	<title>Listagem de Produtos</title>
 </head>
@@ -47,7 +47,7 @@
 			  	<c:forEach var="p" items="${produtos}">
 				    <tr>
 				      <td>${p.id}</td>
-					  <td><img src="${p.imglink}" width="96" height="96"></td>
+					  <td><img src="${p.imglink}" width="96" height="96" alt="Imagem do Item"></td>
 				      <td>${p.ean}</td>
 				      <td>${p.nome}</td>
 				      <td>${p.preco}</td>
