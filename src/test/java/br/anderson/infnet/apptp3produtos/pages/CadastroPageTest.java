@@ -32,7 +32,7 @@ class CadastroPageTest extends BaseTest {
         Produto produto = ProdutoBuilder.aProduto().build();
         cadastrarProduto(produto);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        int um = 1;
+        int um = 1; 
         Assertions.assertEquals(1,um);
     }
 
