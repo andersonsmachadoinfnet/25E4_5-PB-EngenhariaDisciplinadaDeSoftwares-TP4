@@ -1,6 +1,7 @@
 package br.anderson.infnet.apptp3produtos.controller;
 
 import br.anderson.infnet.apptp3produtos.model.domain.Produto;
+import br.anderson.infnet.apptp3produtos.model.domain.ProdutoDTO;
 import br.anderson.infnet.apptp3produtos.model.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,7 +34,8 @@ public class ProdutoController {
     }
 
     @PostMapping(value="/produto/incluir")
-    public String incluir(Produto produto) {
+    public String incluir(ProdutoDTO produtoDTO) {
+        Produto produto =  new Produto(produtoDTO.id(), produtoDTO.ean(), produtoDTO.nome(), produtoDTO.preco(), produtoDTO.imglink());
         produtoService.incluir(produto);
         msg = "Produto "+produto.getNome()+" incluido com sucesso!";
         return "redirect:/"+LINK_LISTA;

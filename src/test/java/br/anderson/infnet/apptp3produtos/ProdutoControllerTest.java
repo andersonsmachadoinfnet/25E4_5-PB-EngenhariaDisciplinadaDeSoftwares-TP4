@@ -66,6 +66,6 @@ class ProdutoControllerTest {
     @Order(5)
     @DisplayName("Testa Controller, incluir;")
     void testeIncluir() {
-        Assertions.assertEquals(LNK_PRODUTO_LISTA, produtoController.incluir(ProdutoBuilder.aProduto().build()));
+        Assertions.assertEquals(LNK_PRODUTO_LISTA, produtoController.incluir(ProdutoBuilder.aProduto().buildDTO()));
     }
 }

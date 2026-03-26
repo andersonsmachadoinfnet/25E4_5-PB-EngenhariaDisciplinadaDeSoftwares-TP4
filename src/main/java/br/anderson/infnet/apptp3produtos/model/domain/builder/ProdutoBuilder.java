@@ -1,6 +1,7 @@
 package br.anderson.infnet.apptp3produtos.model.domain.builder;
 
 import br.anderson.infnet.apptp3produtos.model.domain.Produto;
+import br.anderson.infnet.apptp3produtos.model.domain.ProdutoDTO;
 import com.github.javafaker.Faker;
 
 import java.util.Locale;
@@ -24,5 +25,9 @@ public final class ProdutoBuilder {
 
     public Produto build() {
         return this.produto;
+    }
+
+    public ProdutoDTO buildDTO() {
+        return new ProdutoDTO(this.produto.getId(), this.produto.getEan(), this.produto.getNome(), this.produto.getPreco(), this.produto.getImglink());
     }
 }
