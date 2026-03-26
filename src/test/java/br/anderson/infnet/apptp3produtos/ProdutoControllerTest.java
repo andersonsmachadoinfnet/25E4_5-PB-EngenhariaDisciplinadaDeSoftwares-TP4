@@ -48,13 +48,6 @@ class ProdutoControllerTest {
         Assertions.assertEquals(LNK_PRODUTO_LISTA, produtoController.excluir(9999));
     }
 
-//    @Test
-//    @Order(3)
-//    @DisplayName("Testa Controller, editar;")
-//    public void testeEditar() {
-//        Assertions.assertEquals(produtoController.editar(2, model), "produto/cadastro");
-//    }
-
     @Test
     @Order(4)
     @DisplayName("Testa Controller, editar inexistente;")

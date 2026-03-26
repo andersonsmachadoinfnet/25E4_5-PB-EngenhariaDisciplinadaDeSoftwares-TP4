@@ -8,6 +8,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+
 //@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class CadastroPageTest extends BaseTest {
     private CadastroPage cadastroPage;
@@ -29,11 +31,7 @@ class CadastroPageTest extends BaseTest {
     void testaPreenchimentoFormulario() {
         Produto produto = ProdutoBuilder.aProduto().build();
         cadastrarProduto(produto);
-        try {
-            Thread.sleep(30000l);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         int um = 1;
         Assertions.assertEquals(1,um);
     }
