@@ -11,6 +11,7 @@
 	<groupId>br.anderson.infnet</groupId>
 	<artifactId>appTp3Produtos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>appTp3Produtos</name>
 	<description>Aplicação backend e frontend para gerenciamento de produtos desenvolvidos para o TP3</description>
 	<properties>
