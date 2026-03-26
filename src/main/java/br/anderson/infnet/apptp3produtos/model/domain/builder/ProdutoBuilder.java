@@ -10,7 +10,7 @@ public final class ProdutoBuilder {
 
     public ProdutoBuilder() {
         this.produto = new Produto();
-        Faker faker = new Faker(new Locale("pt-BR"));
+        Faker faker = new Faker(Locale.of("pt-BR"));
         Long lEan = faker.number().numberBetween(7890000000000l, 7899999999999l);
         this.produto.setEan(lEan.toString());
         this.produto.setNome(faker.commerce().productName());

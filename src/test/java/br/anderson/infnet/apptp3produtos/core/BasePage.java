@@ -81,10 +81,7 @@ public abstract class BasePage<P extends BasePage<P>> {
 	}
 
 	protected void sleep(long ms) {
-        try {
-            Thread.sleep(ms);
-        } catch (InterruptedException e) {
-        }
+		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(ms));
     }
 
 	public void scrollTo(By locator) {

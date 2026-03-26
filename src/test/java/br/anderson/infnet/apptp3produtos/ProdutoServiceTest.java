@@ -29,7 +29,7 @@ class ProdutoServiceTest {
     @Test
     @DisplayName("Testa alteração de um determinado item.")
     void testAlterarProduto() {
-        Faker faker = new Faker(new Locale("pt-BR"));
+        Faker faker = new Faker(Locale.of ("pt-BR"));
         Produto produto = produtoService.buscarPorId(1);
         String  nome = faker.commerce().productName();
         produto.setNome(nome);

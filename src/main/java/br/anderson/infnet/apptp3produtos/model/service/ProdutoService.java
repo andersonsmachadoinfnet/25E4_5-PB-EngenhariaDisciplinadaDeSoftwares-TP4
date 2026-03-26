@@ -9,8 +9,12 @@ import java.util.Collection;
 
 @Service
 public class ProdutoService {
-    @Autowired
     private ProdutoRepository produtoRepository;
+
+    @Autowired
+    public ProdutoService(ProdutoRepository produtoRepository) {
+        this.produtoRepository = produtoRepository;
+    }
 
     public Produto incluir(Produto produto) {
         return produtoRepository.save(produto);

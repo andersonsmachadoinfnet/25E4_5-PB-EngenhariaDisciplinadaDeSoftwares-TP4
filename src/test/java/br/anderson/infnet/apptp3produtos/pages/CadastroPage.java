@@ -30,11 +30,11 @@ public class CadastroPage  extends BasePage<HomePage> {
 
     public Produto getProduto() {
         Produto produto = new Produto();
-        produto.setEan($(inputEan).getAttribute("value"));
-        produto.setNome($(inputNome).getAttribute("value"));
-        produto.setPreco(Float.valueOf($(inputPreco).getAttribute("value")));
-        produto.setImglink($(inputImglink).getAttribute("value"));
-        produto.setId(Integer.valueOf($(inputId).getAttribute("value")));
+        produto.setEan($(inputEan). getDomAttribute("value"));
+        produto.setNome($(inputNome).getDomAttribute("value"));
+        produto.setPreco(Float.valueOf($(inputPreco).getDomAttribute("value")));
+        produto.setImglink($(inputImglink).getDomAttribute("value"));
+        produto.setId(Integer.valueOf($(inputId).getDomAttribute("value")));
         return produto;
     }
 }

@@ -13,9 +13,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ProdutoController {
     private static final String LINK_LISTA = "produto/lista";
 
-    @Autowired
     private ProdutoService produtoService;
     private String msg;
+
+    @Autowired
+    public ProdutoController(ProdutoService produtoService) {
+        this.produtoService = produtoService;
+    }
 
     @GetMapping(value="/produto")
     public String telaCadastro() {return "produto/cadastro";}
