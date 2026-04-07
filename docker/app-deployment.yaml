@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appprodutos-app
+  namespace: appprodutos
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: appprodutos-app
+  template:
+    metadata:
+      labels:
+        app: appprodutos-app
+    spec:
+      containers:
+        - name: appprodutos-app
+          image: andersonmachado/appproduots:0.1
+          ports:
+            - containerPort: 8080
